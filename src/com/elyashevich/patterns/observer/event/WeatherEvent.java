@@ -1,13 +1,15 @@
 package com.elyashevich.patterns.observer.event;
 
-public class WeatherEvent {
-    private final String weather;
+import java.util.EventObject;
 
-    public WeatherEvent(String weather) {
-        this.weather = weather;
+public class WeatherEvent extends EventObject {
+
+    public WeatherEvent(String source) {
+        super(source);
     }
 
-    public String getWeather() {
-        return weather;
+    @Override
+    public String getSource() {
+        return (String)super.getSource();
     }
 }

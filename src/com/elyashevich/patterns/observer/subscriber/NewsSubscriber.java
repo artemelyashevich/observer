@@ -6,6 +6,6 @@ import com.elyashevich.patterns.observer.event.NewsEvent;
 public class NewsSubscriber {
     @Subscribe
     public void handleNews(NewsEvent event) {
-        System.out.println("News Update: " + event.getNews());
+        System.out.println("News Update: " + event.getSource());
     }
 }

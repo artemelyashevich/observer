@@ -6,6 +6,6 @@ import com.elyashevich.patterns.observer.event.WeatherEvent;
 public class WeatherSubscriber {
     @Subscribe
     public void handleWeather(WeatherEvent event) {
-        System.out.println("Weather Update: " + event.getWeather());
+        System.out.println("Weather Update: " + event.getSource());
     }
 }
